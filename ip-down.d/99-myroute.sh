@@ -7,7 +7,7 @@ priv_gw=$(echo "$priv_route" | cut -d ' ' -f 1)
 priv_iface=$(echo "$priv_route" | cut -d ' ' -f 2)
 
 # Replace the default route
-ip route replace default via $priv_gw dev $priv_iface
+ip route del default via $5 dev $1
 
 # For Green VPN and Github users:
 #
